@@ -1,12 +1,10 @@
 
 
 var app = angular.module("myapp", ['ngRoute']);
+console.log(app);
 app.config(['$locationProvider' ,'$routeProvider',function ($routeProvider,$locationProvider) {
 	$locationProvider.hasPrefix('!');
-    $routeProvider.when("/", {
-        templateUrl : "/view/userForm.html",	
-        controller: "ctrl",
-    })
+    $routeProvider
     .when("/user", {
         templateUrl : "/view/user.html",	
         controller: "user",
