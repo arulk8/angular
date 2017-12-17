@@ -5,7 +5,6 @@ app.controller('ctrl',function($scope){
 app.controller('user',function($scope){
 	$scope.title="user";
 });
-
 app.controller('business',function($scope){
 	$scope.title="business";
 
