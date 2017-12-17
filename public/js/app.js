@@ -1,13 +1,16 @@
-var app = angular.module("myapp",["ngRoute"]);
-app.config(function($routeProvider) {
-    $routeProvider
-    .when("/", {
-        templateUrl : "userForm.htm1"
+
+
+var app = angular.module("myapp", ['ngRoute']);
+app.config(['$locationProvider' ,'$routeProvider',function ($routeProvider,$locationProvider) {
+	$locationProvider.hasPrefix('!');
+    $routeProvider.when("/user", {
+        templateUrl : "/view/user.html",	
+        controller: "user",
     })
-    .when("/user", {
-        templateUrl : "/view/user.htm"
+   .when("/business", {
+        templateUrl : "/view/business.html",
+
+        controller:"business",
+        
     })
-    .when("/business", {
-        templateUrl : "/view/business.htm"
-    })
-});
+}]);
