@@ -2,7 +2,7 @@
 
 var app = angular.module("myapp", ['ngRoute']);
 console.log(app);
-app.config(['$locationProvider' ,'$routeProvider',function ($routeProvider,$locationProvider) {
+app.config(['$locationProvider' ,'$routeProvider',function ($locationProvider,$routeProvider) {
 	$locationProvider.hasPrefix('!');
     $routeProvider
     .when("/user", {
